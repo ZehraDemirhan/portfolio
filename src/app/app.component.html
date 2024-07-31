@@ -1,336 +1,284 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-<style>
-  :host {
-    --bright-blue: oklch(51.01% 0.274 263.83);
-    --electric-violet: oklch(53.18% 0.28 296.97);
-    --french-violet: oklch(47.66% 0.246 305.88);
-    --vivid-pink: oklch(69.02% 0.277 332.77);
-    --hot-red: oklch(61.42% 0.238 15.34);
-    --orange-red: oklch(63.32% 0.24 31.68);
+<div class="user-select container-fluid min-vh-100 d-flex flex-column">
+	<header class="bg-primary text-primary-foreground py-4 px-6 d-flex align-items-center justify-content-between">
+	  <div class="d-flex align-items-center gap-4 text-white">
+		<img src="/assets/images/graduation.png" width="60" height="60" alt="Zehra Demirhan" class="rounded-circle" />
+		<h4 class="mt-2 fw-bold">Zehra Demirhan</h4>
+	  </div>
+	  <nav class="d-none d-md-flex align-items-center gap-3 text-white">
+		<a href="#about" class="text-primary-foreground text-decoration-none">About</a>
+		<a href="#experience" class="text-primary-foreground text-decoration-none">Experience</a>
+		<a href="#projects" class="text-primary-foreground text-decoration-none">Hobby Projects</a>
+		<a href="#contact" class="text-primary-foreground text-decoration-none">Contact</a>
+	  </nav>
+	  <button class="btn btn-outline-light d-md-none">
+		<i class="bi bi-list"></i>
+		<span class="visually-hidden">Toggle navigation</span>
+	  </button>
+	</header>
+  
+	<main class="flex-grow-1">
+	  <section id="hero" class="bg-primary text-primary-foreground section-spacing section-style">
+		<div class="container d-flex flex-column flex-md-row align-items-center gap-4">
+		  <div class="text-center text-md-start">
+			<h2 class="display-4 fw-bold mb-4 text-white">Hi, I'm Zehra Demirhan</h2>
+			<p class="lead mb-4 text-white">A full-stack web developer with a passion for creating innovative and user-friendly applications.</p>
+			<div class="d-flex justify-content-center justify-content-md-start gap-3">
+			  <a href="#" class="btn btn-light text-primary" (click)="download()">View Resume</a>
+			  <a href="#contact" class="btn btn-outline-light">Contact Me</a>
+			</div>
+		  </div>
+		  <div class="d-flex justify-content-center">
+			<img src="/assets/images/mirror.png" width="400" height="400" alt="Zehra Demirhan" class="rounded-circle" />
+		  </div>
+		</div>
+	  </section>
+  
+	  <section id="about" class="bg-light section-spacing section-style">
+		<div>
+		  <div class="d-flex user-select">
+			<div class="col-md-6 ms-3 mb-4 mb-md-0 about-me-div">
+			  <h2 class="h3 fw-bold mb-4">About Me</h2>
+			  <p class="text-secondary mb-4">
+				I am a math graduate with a software development minor, and I have a strong passion for web development. I have experience working with a variety of technologies, including <strong>Node.js</strong>, <strong>Nest.js</strong>, <strong>MongoDB</strong>, <strong>Angular</strong>, and <strong>React Native</strong> for mobile development.
+			  </p>
+			  <p class="text-secondary mb-4">
+				Throughout my academic and professional journey, I have developed a deep understanding of full-stack web development, from designing and implementing backend systems to creating responsive and user-friendly front-end interfaces. I am constantly learning and exploring new technologies to stay up-to-date with the latest industry trends and best practices.
+			  </p>
+			  <p class="text-secondary">
+				In my free time, I enjoy exploring new ideas, tinkering with various frameworks and libraries, and contributing to open-source projects. I am passionate about creating innovative solutions that solve real-world problems and enhance the user experience.
+			  </p>
+			</div>
+			<h2 class="h3 fw-bold mb-4">Tech Stack</h2>
+			<div class="d-flex justify-content-center align-items-center margin-negative position-relative">
+				<img src="/assets/images/arrow.webp" alt="Arrow" class="arrow">
+				<div class="d-flex justify-content-center align-items-center">
+					<div class="gear-container" (mousedown)="startDragging($event)" (window:mouseup)="stopDragging()" (window:mousemove)="rotateGear($event)">
+						<div class="gear" [ngStyle]="{'transform': 'rotate(' + currentRotation + 'deg)'}">
+						  <div *ngFor="let skill of skills; let i = index" [class]="'icon icon' + (i + 1)" [attr.data-skill-name]="skill.name" >
+							<img [src]="skill.path" [alt]="skill.name" (mouseenter)="setSkill(skill)">
+						  </div>
+						</div>
+						<div class="center-circle" [ngStyle]="{'transform': 'rotate(' + currentRotation + 'deg)'}">
+						  <i class="bi bi-gear-wide-connected fs-1"></i>
+						</div>
+						<div class="collison-detect"></div>
+					  </div> 
+			</div>
+		
+			<i id="arrow" class="fa fa-arrow-right me-2 ms-3 fs-1 text-muted"></i>
+			<div class="skill-display">
+				
+					<h4>{{ currentSkill?.name }}</h4>
+					<p>{{ currentSkill?.experience }}</p>
+				  
+				</div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+  
+	  <section id="gpa" class="bg-secondary text-white section-spacing section-style">
+		<div class="container">
+		  <div class="d-flex justify-content-around">
+			<div class="gpa-card bg-dark p-4 rounded text-center">
+			  <i class="fas fa-calculator fa-2x mb-2"></i>
+			  <h3 class="h5 mb-2">MATH GPA</h3>
+			  <p class="display-4 mb-0">3.43</p>
+			</div>
+			<div class="gpa-card bg-dark p-4 rounded text-center">
+			  <i class="fas fa-laptop-code fa-2x mb-2"></i>
+			  <h3 class="h5 mb-2">CTIS MINOR GPA</h3>
+			  <p class="display-4 mb-0">4.00</p>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	  <section id="experience" class="section-spacing section-style card2">
+		<div class="container">
+		  <h2 class="h3 fw-bold mb-8">Experience</h2>
+		  <div class="row">
+			<div class=" mb-4">
+			  <div class="bg-white rounded p-4 h-100">
+				<h3 class="h5 fw-bold mb-3">Web Developer / Mobile Developer</h3>
+				<div class="d-flex align-items-center mb-4">
+				<img src="data:image/png;base64,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" alt="Cubicl" class="me-3 img-container" />
+				<img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_2624/https%3A%2F%2Fimages.ctfassets.net%2Fdm4oa8qtogq0%2F6asJmtJmSgwRci2XtgzkFA%2Fdb1b365dfac47710e584817039ea7397%2Fmonkedo_logo_dark.png%3Fw%3D270" class="img-container">
+				</div>
+				<h4 class="h6 fw-medium mb-2">Cubicl & Monkedo</h4>
+				<p class="text-secondary mb-4">May 2023 - Present</p>
+				<ul class="">
+					<li class="mb-1" class="mb-1">Coded integration between our platform and APIs of well-known companies such as ClickUp, Line, Mailchimp, and Cubicl. Developed seamless connections to enable data exchange and automated workflows.</li>
+					<li class="mb-1">Developed components for performing operations using these integrated APIs, ensuring efficient and reliable functionality within our no-code automation platform.</li>
+					<li class="mb-1">Implemented a comprehensive error handling interface to display errors to users effectively. This included developing detailed error messages, tooltips, and visual indicators.</li>
+					<li class="mb-1">Created a statistics page featuring recent errors, which includes a graphical representation of error trends and a detailed modal view for in-depth error analysis.</li>
+					<li class="mb-1">Designed and developed both the backend system and the frontend for error handling in our platform.</li>
+					<li class="mb-1">Developed an extended display UI for showing results in a clear and effective manner, ensuring that complex data is presented nicely to users.</li>
+					<li class="mb-1">Developed file operation components, including tasks such as compressing files, creating files from base64, retrieving content as base64, and handling binary content. These components streamlined file management within the platform.</li>
+					<li class="mb-1">Led the development of a comprehensive app development feature, encompassing both backend and frontend code. This task took me four months to complete and involved the following:
+					  <ul>
+						<li class="mb-1"><strong>Details Page:</strong> Provided a platform for users to view the current state of the application, access application information, and understand the app development process in detail.</li>
+						<li class="mb-1"><strong>App Editing Page:</strong> Consisted of three tabs:
+						  <ul>
+							<li class="mb-1"><em>App Design Tab:</em> Enabled users to design the app interface by dragging and dropping components, testing the application, and making dynamic changes supported by expression handling.</li>
+							<li class="mb-1"><em>Flows Tab:</em> Allowed users to create automations for the app. Users could save, edit, and review automations, and link named values to component inputs for dynamic updates.</li>
+							<li class="mb-1"><em>Details Tab:</em> Included a form for setting the app's name, description, and visual elements, allowing users to update application details.</li>
+						  </ul>
+						</li>
+						<li class="mb-1"><strong>Toolbar:</strong> Provided real-time observation of named values and errors, with indicators for new values and errors. Users could inspect details by clicking the respective buttons.</li>
 
-    --gray-900: oklch(19.37% 0.006 300.98);
-    --gray-700: oklch(36.98% 0.014 302.71);
-    --gray-400: oklch(70.9% 0.015 304.04);
-
-    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
-      180deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
-
-    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
-      90deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
-
-    --pill-accent: var(--bright-blue);
-
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  h1 {
-    font-size: 3.125rem;
-    color: var(--gray-900);
-    font-weight: 500;
-    line-height: 100%;
-    letter-spacing: -0.125rem;
-    margin: 0;
-    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-  }
-
-  p {
-    margin: 0;
-    color: var(--gray-700);
-  }
-
-  main {
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    box-sizing: inherit;
-    position: relative;
-  }
-
-  .angular-logo {
-    max-width: 9.2rem;
-  }
-
-  .content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 700px;
-    margin-bottom: 3rem;
-  }
-
-  .content h1 {
-    margin-top: 1.75rem;
-  }
-
-  .content p {
-    margin-top: 1.5rem;
-  }
-
-  .divider {
-    width: 1px;
-    background: var(--red-to-pink-to-purple-vertical-gradient);
-    margin-inline: 0.5rem;
-  }
-
-  .pill-group {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-  }
-
-  .pill {
-    display: flex;
-    align-items: center;
-    --pill-accent: var(--bright-blue);
-    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
-    color: var(--pill-accent);
-    padding-inline: 0.75rem;
-    padding-block: 0.375rem;
-    border-radius: 2.75rem;
-    border: 0;
-    transition: background 0.3s ease;
-    font-family: var(--inter-font);
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.4rem;
-    letter-spacing: -0.00875rem;
-    text-decoration: none;
-  }
-
-  .pill:hover {
-    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
-  }
-
-  .pill-group .pill:nth-child(6n + 1) {
-    --pill-accent: var(--bright-blue);
-  }
-  .pill-group .pill:nth-child(6n + 2) {
-    --pill-accent: var(--french-violet);
-  }
-  .pill-group .pill:nth-child(6n + 3),
-  .pill-group .pill:nth-child(6n + 4),
-  .pill-group .pill:nth-child(6n + 5) {
-    --pill-accent: var(--hot-red);
-  }
-
-  .pill-group svg {
-    margin-inline-start: 0.25rem;
-  }
-
-  .social-links {
-    display: flex;
-    align-items: center;
-    gap: 0.73rem;
-    margin-top: 1.5rem;
-  }
-
-  .social-links path {
-    transition: fill 0.3s ease;
-    fill: var(--gray-400);
-  }
-
-  .social-links a:hover svg path {
-    fill: var(--gray-900);
-  }
-
-  @media screen and (max-width: 650px) {
-    .content {
-      flex-direction: column;
-      width: max-content;
-    }
-
-    .divider {
-      height: 1px;
-      width: 100%;
-      background: var(--red-to-pink-to-purple-horizontal-gradient);
-      margin-block: 1.5rem;
-    }
-  }
-</style>
-
-<main class="main">
-  <div class="content">
-    <div class="left-side">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 982 239"
-        fill="none"
-        class="angular-logo"
-      >
-        <g clip-path="url(#a)">
-          <path
-            fill="url(#b)"
-            d="M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z"
-          />
-          <path
-            fill="url(#c)"
-            d="M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z"
-          />
-        </g>
-        <defs>
-          <radialGradient
-            id="c"
-            cx="0"
-            cy="0"
-            r="1"
-            gradientTransform="rotate(118.122 171.182 60.81) scale(205.794)"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#FF41F8" />
-            <stop offset=".707" stop-color="#FF41F8" stop-opacity=".5" />
-            <stop offset="1" stop-color="#FF41F8" stop-opacity="0" />
-          </radialGradient>
-          <linearGradient
-            id="b"
-            x1="0"
-            x2="982"
-            y1="192"
-            y2="192"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F0060B" />
-            <stop offset="0" stop-color="#F0070C" />
-            <stop offset=".526" stop-color="#CC26D5" />
-            <stop offset="1" stop-color="#7702FF" />
-          </linearGradient>
-          <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
-        </defs>
-      </svg>
-      <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
-    </div>
-    <div class="divider" role="separator" aria-label="Divider"></div>
-    <div class="right-side">
-      <div class="pill-group">
-        @for (item of [
-          { title: 'Explore the Docs', link: 'https://angular.dev' },
-          { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },
-          { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },
-          { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },
-          { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },
-        ]; track item.title) {
-          <a
-            class="pill"
-            [href]="item.link"
-            target="_blank"
-            rel="noopener"
-          >
-            <span>{{ item.title }}</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="14"
-              viewBox="0 -960 960 960"
-              width="14"
-              fill="currentColor"
-            >
-              <path
-                d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
-              />
-            </svg>
-          </a>
-        }
-      </div>
-      <div class="social-links">
-        <a
-          href="https://github.com/angular/angular"
-          aria-label="Github"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg
-            width="25"
-            height="24"
-            viewBox="0 0 25 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            alt="Github"
-          >
-            <path
-              d="M12.3047 0C5.50634 0 0 5.50942 0 12.3047C0 17.7423 3.52529 22.3535 8.41332 23.9787C9.02856 24.0946 9.25414 23.7142 9.25414 23.3871C9.25414 23.0949 9.24389 22.3207 9.23876 21.2953C5.81601 22.0377 5.09414 19.6444 5.09414 19.6444C4.53427 18.2243 3.72524 17.8449 3.72524 17.8449C2.61064 17.082 3.81137 17.0973 3.81137 17.0973C5.04697 17.1835 5.69604 18.3647 5.69604 18.3647C6.79321 20.2463 8.57636 19.7029 9.27978 19.3881C9.39052 18.5924 9.70736 18.0499 10.0591 17.7423C7.32641 17.4347 4.45429 16.3765 4.45429 11.6618C4.45429 10.3185 4.9311 9.22133 5.72065 8.36C5.58222 8.04931 5.16694 6.79833 5.82831 5.10337C5.82831 5.10337 6.85883 4.77319 9.2121 6.36459C10.1965 6.09082 11.2424 5.95546 12.2883 5.94931C13.3342 5.95546 14.3801 6.09082 15.3644 6.36459C17.7023 4.77319 18.7328 5.10337 18.7328 5.10337C19.3942 6.79833 18.9789 8.04931 18.8559 8.36C19.6403 9.22133 20.1171 10.3185 20.1171 11.6618C20.1171 16.3888 17.2409 17.4296 14.5031 17.7321C14.9338 18.1012 15.3337 18.8559 15.3337 20.0084C15.3337 21.6552 15.3183 22.978 15.3183 23.3779C15.3183 23.7009 15.5336 24.0854 16.1642 23.9623C21.0871 22.3484 24.6094 17.7341 24.6094 12.3047C24.6094 5.50942 19.0999 0 12.3047 0Z"
-            />
-          </svg>
-        </a>
-        <a
-          href="https://twitter.com/angular"
-          aria-label="Twitter"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            alt="Twitter"
-          >
-            <path
-              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-            />
-          </svg>
-        </a>
-        <a
-          href="https://www.youtube.com/channel/UCbn1OgGei-DV7aSRo_HaAiw"
-          aria-label="Youtube"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg
-            width="29"
-            height="20"
-            viewBox="0 0 29 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            alt="Youtube"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M27.4896 1.52422C27.9301 1.96749 28.2463 2.51866 28.4068 3.12258C29.0004 5.35161 29.0004 10 29.0004 10C29.0004 10 29.0004 14.6484 28.4068 16.8774C28.2463 17.4813 27.9301 18.0325 27.4896 18.4758C27.0492 18.9191 26.5 19.2389 25.8972 19.4032C23.6778 20 14.8068 20 14.8068 20C14.8068 20 5.93586 20 3.71651 19.4032C3.11363 19.2389 2.56449 18.9191 2.12405 18.4758C1.68361 18.0325 1.36732 17.4813 1.20683 16.8774C0.613281 14.6484 0.613281 10 0.613281 10C0.613281 10 0.613281 5.35161 1.20683 3.12258C1.36732 2.51866 1.68361 1.96749 2.12405 1.52422C2.56449 1.08095 3.11363 0.76113 3.71651 0.596774C5.93586 0 14.8068 0 14.8068 0C14.8068 0 23.6778 0 25.8972 0.596774C26.5 0.76113 27.0492 1.08095 27.4896 1.52422ZM19.3229 10L11.9036 5.77905V14.221L19.3229 10Z"
-            />
-          </svg>
-        </a>
-      </div>
-    </div>
+					  </ul>
+					</li>
+					<li class="mb-1">Developed a chat feature for the mobile project, enabling real-time communication between users. Implemented functionalities such as message sending, receiving, notifications, and chat history management.</li>
+				  </ul>
+				  
+			  </div>
+			</div>
+			<div class="mb-4">
+			  <div class="bg-white rounded p-4 ">
+				<h3 class="h5 fw-bold mb-3">Intern</h3>
+				<img src="data:image/png;base64,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" alt="Cubicl" class="me-3 mb-4 img-container" />
+				<h4 class="h6 fw-medium mb-2">Cubicl</h4>
+				<p class="text-secondary mb-4">December 2022 - April 2023</p>
+				<ul class="">
+					<li class="mb-1">Fixed several bugs in the mobile app, improving stability and performance.</li>
+					<li class="mb-1">Enhanced and resolved numerous UI issues to provide a better user experience.</li>
+					<li class="mb-1">Gained an understanding of React Native and CSS.</li>
+					<li class="mb-1">Learned JSX syntax and proficient use of Git for version control.</li>
+					<li class="mb-1">Familiarized with the lifecycle hooks of React Native.</li>
+					<li class="mb-1">Was responsible for branch management, building projects using Xcode and Android Studio.</li>
+					<li class="mb-1">Published new version updates on Play Console and App Store Connect.</li>
+				</ul>
+			  </div>
+		
+			</div>
+		  </div>
+		</div>
+		
+	  </section>
+	  <div class="mt-1">
+		<div class="card-body d-flex justify-content-center align-items-center flex-column">
+			
+				<h3 class="card-title fw-bold mt-4 mb-4">Showcase of My Developed Project Features</h3>
+			 
+		  <div class="screen-shot-container">
+			<img [src]="uiScreenShotPathsandDesc[index].path" alt="Screenshot 1" class="img-fluid mb-3 rounded">
+			<div class="card-text"><div>{{uiScreenShotPathsandDesc[index].desc}}</div></div>
+		  </div>
+		</div>
+	  </div>
+	  
+  
+	  <section id="projects" class="bg-light section-spacing">
+		<div class="container">
+		  <h2 class="h3 fw-bold mb-8">Hobby Projects</h2>
+		  <div class="row">
+			<div class="col-md-4 mb-4">
+			  <div class="card h-100 position-relative">
+				<div class="position"> <a href="https://zehrademirhan.github.io/domino-problem/" target="_blank" class="text-secondary text-decoration-none">
+					<i  href="https://zehrademirhan.github.io/domino-problem/"  class="bi bi-arrow-up-right-square-fill fs-3"></i></a></div>
+				<img src="/assets/images/domino.png" class="card-img-top icon-style" alt="Domino Project">
+				<div class="card-body">
+				  <h5 class="card-title fw-bold mb-2">Domino Problem</h5>
+				 
+				  <p class="card-text mb-4">I created a small hobby project to better understand Angular.js by solving a domino problem.</p>
+				  <div class="d-flex gap-2">
+					<span class="badge bg-secondary">Type Script</span>
+					<span class="badge bg-secondary">Bootstrap</span>
+					<span class="badge bg-secondary">Angular</span>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 mb-4">
+			  <div class="card h-100 position-relative">
+				<div class="position"> <a href="https://github.com/ZehraDemirhan/multiplayer-snake-game" target="_blank" class="text-secondary text-decoration-none">
+					<i  href=""  class="bi bi-arrow-up-right-square-fill fs-3"></i></a></div>
+				<img src="/assets/images/snake.jpeg" class="card-img-top icon-style" alt="Project 2">
+				<div class="card-body">
+				  <h5 class="card-title fw-bold mb-2">Online Snake Game</h5>
+				  <p class="card-text mb-4">I started coding an online snake game to improve my backend development skills. The project is still in progress but has been a good learning experience. I chose to use Vite for its fast build times and efficient hot module replacement, which have significantly improved my development workflow.</p>
+				  <div class="d-flex gap-2">
+					<span class="badge bg-secondary">Type Script</span>
+					<span class="badge bg-secondary">RxJS</span>
+					<span class="badge bg-secondary">CSS</span>
+					<span class="badge bg-secondary">Node.js</span>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 mb-4">
+			  <div class="card h-100 position-relative">
+				<div class="position"> <a href="https://zehrademirhan.github.io/MyWorldWebSite.github.io/index.html" target="_blank" class="text-secondary text-decoration-none">
+					<i  href=""  class="bi bi-arrow-up-right-square-fill fs-3"></i></a></div>
+				<img src="/assets/images/compass.jpg" class="card-img-top icon-style" alt="Project 3">
+				<div class="card-body">
+				  <h5 class="card-title fw-bold mb-2">My World Website Project</h5>
+				  <p class="card-text mb-4">My very first project: A static website built with HTML, CSS, JavaScript, and jQuery, hosted on GitHub. It features continent cards, a card generator, world map and country flag information, and a car race game. I used the Materialize CSS library and jQuery UI plugins to enhance the site.</p>
+				  <div class="d-flex gap-2">
+					<span class="badge bg-secondary">HTML</span>
+					<span class="badge bg-secondary">Java Script</span>
+					<span class="badge bg-secondary">CSS</span>
+					<span class="badge bg-secondary">jQuery</span>
+					<span class="badge bg-secondary">Materialize CSS</span>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+  
+	  <section id="contact" class="section-spacing">
+		<div class="container">
+		  <h2 class="h3 fw-bold mb-8">Contact Me <i class="bi bi-question-circle-fill fs-4 ms-1 text-muted" ngbTooltip="Although this project does not include a backend, the send email functionality works because I have set up an event flow in our no-code automation platform. This flow listens for incoming requests to a specific webhook URL and triggers the email operation accordingly.
+			" placement="right"></i></h2>
+		  <div class="row">
+			<div class="col-md-6 mb-4 mb-md-0">
+			  <form class="space-y-4">
+				<div class="mb-3">
+				  <label for="name" class="form-label">Name</label>
+				  <input type="text" id="name" name="name" class="form-control" [(ngModel)]="name" required />
+				</div>
+				<div class="mb-3">
+				  <label for="email" class="form-label">Email</label>
+				  <input type="email" id="email" name="email" [(ngModel)]="email" class="form-control" required />
+				</div>
+				<div class="mb-3">
+				  <label for="message" class="form-label">Message</label>
+				  <textarea id="message" rows="5" name="message" [(ngModel)]="message" class="form-control" required></textarea>
+				</div>
+				<button type="submit" class="btn btn-secondary w-100" (click)="sendEmail()">Send Message</button>
+			  </form>
+			</div>
+			<div class="col-md-6 d-flex flex-column gap-3">
+			  <div class="d-flex align-items-center gap-3">
+				<i class="bi bi-envelope text-primary"></i>
+				<a href="mailto:zehra@example.com" class="text-secondary text-decoration-none">zehra.demirhan00&#64;gmail.com</a>
+			  </div>
+			  <div class="d-flex align-items-center gap-3">
+				<i class="bi bi-telephone text-primary"></i>
+				<a href="tel:+905079324854" class="text-secondary text-decoration-none">+90 (507) 932 48-54</a>
+			  </div>
+			  <div class="d-flex align-items-center gap-3">
+				<i class="bi bi-linkedin text-primary"></i>
+				<a href="https://www.linkedin.com/in/zehra-demirhan-b5a26a233/"  target="_blank" class="text-secondary text-decoration-none">LinkedIn</a>
+			  </div>
+			  <div class="d-flex align-items-center gap-3">
+				<i class="bi bi-github text-primary"></i>
+				<a href="https://github.com/ZehraDemirhan" target="_blank" class="text-secondary text-decoration-none">GitHub</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	</main>
+  
+	<footer class="bg-primary text-primary-foreground py-4 px-6">
+	  <div class="container d-flex justify-content-end align-items-center">
+		<p class="mb-0 text-white">&copy; 2024 Zehra Demirhan. All rights reserved.</p>
+	  </div>
+	</footer>
   </div>
-</main>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-<router-outlet />
+  
