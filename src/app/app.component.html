@@ -159,76 +159,156 @@
 	  </section>
 	  <div class="mt-1">
 		<div class="card-body d-flex justify-content-center align-items-center flex-column">
-			
-				<h3 class="card-title fw-bold mt-4 mb-4">Showcase of My Developed Project Features</h3>
-			 
-		  <div class="screen-shot-container">
+			<h3 class="card-title fw-bold mt-4 mb-4">Showcase of My Developed Project Features</h3>
+		<div class="screen-shot-container">
 			<img [src]="uiScreenShotPathsandDesc[index].path" alt="Screenshot 1" class="img-fluid mb-3 rounded">
 			<div class="card-text"><div>{{uiScreenShotPathsandDesc[index].desc}}</div></div>
 		  </div>
 		</div>
-	  </div>
-	  
-  
+	  </div>	
 	  <section id="projects" class="bg-light section-spacing">
 		<div class="container">
 		  <h2 class="h3 fw-bold mb-8">Hobby Projects</h2>
 		  <div class="row">
+			<!-- Personal Website Project -->
 			<div class="col-md-4 mb-4">
 			  <div class="card h-100 position-relative">
-				<div class="position"> <a href="https://zehrademirhan.github.io/domino-problem/" target="_blank" class="text-secondary text-decoration-none">
-					<i  href="https://zehrademirhan.github.io/domino-problem/"  class="bi bi-arrow-up-right-square-fill fs-3"></i></a></div>
-				<img src="/assets/images/domino.png" class="card-img-top icon-style" alt="Domino Project">
+				<div class="position">
+				  <a href="https://github.com/ZehraDemirhan/portfolio" target="_blank" class="text-secondary text-decoration-none">
+					<i class="bi bi-arrow-up-right-square-fill fs-3"></i>
+				  </a>
+				</div>
+				<img src="/assets/images/zicon.png" class="card-img-top icon-style" alt="Portfolio Project">
 				<div class="card-body">
-				  <h5 class="card-title fw-bold mb-2">Domino Problem</h5>
-				 
-				  <p class="card-text mb-4">I created a small hobby project to better understand Angular.js by solving a domino problem.</p>
+				  <h5 class="card-title fw-bold mb-2">Personal Website Project</h5>
+				  <p class="card-text mb-4">A newly developed personal website showcasing my portfolio, skills, and projects. It features a responsive design and interactive elements, built with Angular, Bootstrap, and Node.js.</p>
 				  <div class="d-flex gap-2">
-					<span class="badge bg-secondary">Type Script</span>
-					<span class="badge bg-secondary">Bootstrap</span>
 					<span class="badge bg-secondary">Angular</span>
+					<span class="badge bg-secondary">Bootstrap</span>
+					<span class="badge bg-secondary">Node.js</span>
 				  </div>
+				  <p class="mt-2 text-muted"><small>Completed: July 2024</small></p>
 				</div>
 			  </div>
 			</div>
+			<!-- Online Snake Game -->
 			<div class="col-md-4 mb-4">
 			  <div class="card h-100 position-relative">
-				<div class="position"> <a href="https://github.com/ZehraDemirhan/multiplayer-snake-game" target="_blank" class="text-secondary text-decoration-none">
-					<i  href=""  class="bi bi-arrow-up-right-square-fill fs-3"></i></a></div>
-				<img src="/assets/images/snake.jpeg" class="card-img-top icon-style" alt="Project 2">
+				<div class="position">
+				  <a href="https://github.com/ZehraDemirhan/multiplayer-snake-game" target="_blank" class="text-secondary text-decoration-none">
+					<i class="bi bi-arrow-up-right-square-fill fs-3"></i>
+				  </a>
+				</div>
+				<img src="/assets/images/snake.jpeg" class="card-img-top icon-style" alt="Online Snake Game">
 				<div class="card-body">
 				  <h5 class="card-title fw-bold mb-2">Online Snake Game</h5>
-				  <p class="card-text mb-4">I started coding an online snake game to improve my backend development skills. The project is still in progress but has been a good learning experience. I chose to use Vite for its fast build times and efficient hot module replacement, which have significantly improved my development workflow.</p>
+				  <p class="card-text mb-4">An online snake game developed to improve backend development skills using Vite for fast build times and efficient hot module replacement. The project is still in progress.</p>
 				  <div class="d-flex gap-2">
-					<span class="badge bg-secondary">Type Script</span>
+					<span class="badge bg-secondary">TypeScript</span>
 					<span class="badge bg-secondary">RxJS</span>
 					<span class="badge bg-secondary">CSS</span>
 					<span class="badge bg-secondary">Node.js</span>
 				  </div>
+				  <p class="mt-2 text-muted"><small>In Progress: May 2024 - Present</small></p>
+				</div>
+			  </div>
+			</div>
+			<!-- Domino Problem -->
+			<div class="col-md-4 mb-4">
+			  <div class="card h-100 position-relative">
+				<div class="position">
+				  <a href="https://zehrademirhan.github.io/domino-problem/" target="_blank" class="text-secondary text-decoration-none">
+					<i class="bi bi-arrow-up-right-square-fill fs-3"></i>
+				  </a>
+				</div>
+				<img src="/assets/images/domino.png" class="card-img-top icon-style" alt="Domino Project">
+				<div class="card-body">
+				  <h5 class="card-title fw-bold mb-2">Domino Problem</h5>
+				  <p class="card-text mb-4">A frontend application developed using AngularJS, TypeScript, Bootstrap, and SCSS to gain a deeper understanding of the Angular framework.</p>
+				  <div class="d-flex gap-2">
+					<span class="badge bg-secondary">TypeScript</span>
+					<span class="badge bg-secondary">Bootstrap</span>
+					<span class="badge bg-secondary">Angular</span>
+					<span class="badge bg-secondary">SCSS</span>
+				  </div>
+				  <p class="mt-2 text-muted"><small>Completed: April 2024</small></p>
+				</div>
+			  </div>
+			</div>
+			<h2 class="h3 fw-bold mb-8 mt-4">Old Projects</h2>
+			<!-- Java Quiz App -->
+			<div class="col-md-4 mb-4">
+			  <div class="card h-100 position-relative">
+				<div class="position">
+				  <a href="https://github.com/ZehraDemirhan/java-quiz-app" target="_blank" class="text-secondary text-decoration-none">
+					<i class="bi bi-arrow-up-right-square-fill fs-3"></i>
+				  </a>
+				</div>
+				<img src="/assets/images/quiz_icon.png" class="card-img-top icon-style" alt="Java Quiz App">
+				<div class="card-body">
+				  <h5 class="card-title fw-bold mb-2">Java Quiz App</h5>
+				  <p class="card-text mb-4">A desktop application built with Java Swing.</p>
+				  <div class="d-flex gap-2">
+					<span class="badge bg-secondary">Java</span>
+					<span class="badge bg-secondary">Swing</span>
+				  </div>
+				  <p class="mt-2 text-muted"><small>Completed: Fall 2023</small></p>
 				</div>
 			  </div>
 			</div>
 			<div class="col-md-4 mb-4">
+				<div class="card h-100 position-relative">
+				  <div class="position">
+					<a href="https://github.com/ZehraDemirhan/TaskManagerProject" target="_blank" class="text-secondary text-decoration-none">
+					  <i class="bi bi-arrow-up-right-square-fill fs-3"></i>
+					</a>
+				  </div>
+				  <img src="/assets/images/task_manager.png" class="card-img-top icon-style" alt="Task Manager Application">
+				  <div class="card-body">
+					<h5 class="card-title fw-bold mb-2">Basic Task Manager Application</h5>
+					<p class="card-text mb-4">A basic app where users can register, login, create task lists, and manage tasks. Developed using PHP, JavaScript, and jQuery, with AJAX technologies for styling. Deployed on Heroku using ClearDB. (Currently inaccessible due to database unavailability.)</p>
+					<div class="d-flex gap-2">
+					  <span class="badge bg-secondary">PHP</span>
+					  <span class="badge bg-secondary">JavaScript</span>
+					  <span class="badge bg-secondary">jQuery</span>
+					  <span class="badge bg-secondary">AJAX</span>
+					</div>
+					<p class="mt-2 text-muted"><small>Completed: Spring 2022</small></p>
+				  </div>
+				</div>
+			  </div>
+			<!-- My World Website Project -->
+			<div class="col-md-4 mb-4">
 			  <div class="card h-100 position-relative">
-				<div class="position"> <a href="https://zehrademirhan.github.io/MyWorldWebSite.github.io/index.html" target="_blank" class="text-secondary text-decoration-none">
-					<i  href=""  class="bi bi-arrow-up-right-square-fill fs-3"></i></a></div>
-				<img src="/assets/images/compass.jpg" class="card-img-top icon-style" alt="Project 3">
+				<div class="position">
+				  <a href="https://zehrademirhan.github.io/MyWorldWebSite.github.io/index.html" target="_blank" class="text-secondary text-decoration-none">
+					<i class="bi bi-arrow-up-right-square-fill fs-3"></i>
+				  </a>
+				</div>
+				<img src="/assets/images/compass.jpg" class="card-img-top icon-style" alt="My World Website Project">
 				<div class="card-body">
 				  <h5 class="card-title fw-bold mb-2">My World Website Project</h5>
-				  <p class="card-text mb-4">My very first project: A static website built with HTML, CSS, JavaScript, and jQuery, hosted on GitHub. It features continent cards, a card generator, world map and country flag information, and a car race game. I used the Materialize CSS library and jQuery UI plugins to enhance the site.</p>
+				  <p class="card-text mb-4">A static website project constructed in HTML, CSS, JavaScript, and jQuery, featuring continent cards, a card generator, world map and country flag information, and a car race game. Enhanced with Materialize CSS and jQuery UI plugins.</p>
 				  <div class="d-flex gap-2">
 					<span class="badge bg-secondary">HTML</span>
-					<span class="badge bg-secondary">Java Script</span>
+					<span class="badge bg-secondary">JavaScript</span>
 					<span class="badge bg-secondary">CSS</span>
 					<span class="badge bg-secondary">jQuery</span>
 					<span class="badge bg-secondary">Materialize CSS</span>
 				  </div>
+				  <p class="mt-2 text-muted"><small>Completed: Fall 2022</small></p>
 				</div>
 			  </div>
 			</div>
+			<!-- Task Manager Application -->
+			
+			<!-- Personal Website Project (Previous) -->
+	
 		  </div>
 		</div>
 	  </section>
+	  
+	  
   
 	  <section id="contact" class="section-spacing">
 		<div class="container">

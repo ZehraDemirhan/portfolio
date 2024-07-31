@@ -292,7 +292,6 @@
 	position: absolute;
 	top: -6px;
 	right: 0;
-
   }
 
   .position-relative {
@@ -340,4 +339,9 @@
 .user-select {
 	cursor: pointer;
 	user-select: none;
+}
+
+.centered-row {
+	display: flex;
+    justify-content: center;
 }

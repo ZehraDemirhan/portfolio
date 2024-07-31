@@ -5,7 +5,7 @@ export const SKILLS = [
   {
     name: 'Angular',
     path: 'assets/images/angular-icon.webp',
-    experience: 'I have been using Angular for 1.5 years, during which I have developed numerous UIs utilizing a range of technologies. My expertise includes creating and using directives and pipes, with a strong understanding of component interactions such as input bindings, event emitting, and two-way bindings. I am well-versed in SCSS for styling, creating frontend services, and implementing dependency injections. Additionally, I am proficient with third-party libraries, including ng-bootstrap, ApexCharts, and RXJS.'
+    experience: 'I have been using Angular for 1.5 years, during which I have developed numerous UIs utilizing a range of technologies. My expertise includes creating and using directives and pipes, with a strong understanding of component interactions such as input bindings, event emitting, and two-way bindings. I am well-versed in SCSS for styling, creating frontend services.  Additionally, I am proficient with third-party libraries, including ng-bootstrap, ApexCharts, and RXJS.'
   },
   {
     name: 'Nest.js',
@@ -128,7 +128,7 @@ background: any;
 	// Rotate the UI screenshots every 3 seconds
 	setInterval(() => {
 		this.index = (this.index + 1) % this.uiScreenShotPathsandDesc.length;
-	}, 5000);
+	}, 4000);
   }
 
   startInitialRotation(): void {
