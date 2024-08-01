@@ -345,3 +345,37 @@
 	display: flex;
     justify-content: center;
 }
+
+.mobile-container {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu {
+	display: none;
+    position: absolute;
+    top: 76px;
+    right: 30px;
+    border-radius: 8px;
+    background-color: #343a40e0;
+    /* width: 300px; */
+    padding: 1rem;
+    z-index: 5;
+    color: white;
+  }
+  
+  .mobile-menu a {
+	display: block;
+	color: white;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+  }
+  
+  .mobile-menu a:hover {
+	background-color: #495057;
+  }
+  
+  .border-bottom {
+	border-bottom: 1px solid;
+  }

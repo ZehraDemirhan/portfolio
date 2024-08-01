@@ -121,9 +121,35 @@ export class AppComponent implements OnInit {
   name = '';
   email = '';
   message = '';
-background: any;
+	background: any;
+	isMobile: boolean = false;
+
+	@HostListener('window:resize', ['$event'])
+	onResize() {
+		console.log('resize');
+	  this.checkScreenSize();
+	}
+  
+	checkScreenSize() {
+	  this.isMobile = window.innerWidth <= 768;
+	}
 
   ngOnInit(): void {
+
+	document.addEventListener('DOMContentLoaded', function () {
+		const menuToggle = document.getElementById('menu-toggle');
+		const mobileMenu = document.getElementById('mobile-menu');
+	
+		menuToggle!.addEventListener('click', function () {
+			console.log('clicked');
+		  if (mobileMenu!.style.display === 'block') {
+			mobileMenu!.style.display = 'none';
+		  } else {
+			mobileMenu!.style.display = 'block';
+		  }
+		});
+	  });
+	this.checkScreenSize();
     this.startInitialRotation();
 
 	// Rotate the UI screenshots every 3 seconds

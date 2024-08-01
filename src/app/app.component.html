@@ -12,10 +12,18 @@
 		<a href="#projects" class="text-primary-foreground text-decoration-none">Hobby Projects</a>
 		<a href="#contact" class="text-primary-foreground text-decoration-none">Contact</a>
 	  </nav>
-	  <button class="btn btn-outline-light d-md-none">
+	  <button class="btn btn-outline-light d-md-none" id="menu-toggle">
 		<i class="bi bi-list"></i>
 		<span class="visually-hidden">Toggle navigation</span>
 	  </button>
+
+	  <!-- Mobile Menu -->
+  <div class="mobile-menu d-md-none" id="mobile-menu">
+    <a href="#about" class="text-primary-foreground text-decoration-none border-bottom">About</a>
+    <a href="#experience" class="text-primary-foreground text-decoration-none border-bottom">Experience</a>
+    <a href="#projects" class="text-primary-foreground text-decoration-none border-bottom">Hobby Projects</a>
+    <a href="#contact" class="text-primary-foreground text-decoration-none border-bottom">Contact</a>
+  </div>
 	</header>
   
 	<main class="flex-grow-1">
@@ -38,7 +46,7 @@
 	  <section id="about" class="bg-light section-spacing section-style">
 		<div>
 		  <div class="d-flex user-select">
-			<div class="col-md-6 ms-3 mb-4 mb-md-0 about-me-div">
+			<div class="col-md-6 ms-3 mb-4 mb-md-0" [ngClass]="{'about-me-div': !isMobile}">
 			  <h2 class="h3 fw-bold mb-4">About Me</h2>
 			  <p class="text-secondary mb-4">
 				I am a math graduate with a software development minor, and I have a strong passion for web development. I have experience working with a variety of technologies, including <strong>Node.js</strong>, <strong>Nest.js</strong>, <strong>MongoDB</strong>, <strong>Angular</strong>, and <strong>React Native</strong> for mobile development.
@@ -50,8 +58,9 @@
 				In my free time, I enjoy exploring new ideas, tinkering with various frameworks and libraries, and contributing to open-source projects. I am passionate about creating innovative solutions that solve real-world problems and enhance the user experience.
 			  </p>
 			</div>
-			<h2 class="h3 fw-bold mb-4">Tech Stack</h2>
-			<div class="d-flex justify-content-center align-items-center margin-negative position-relative">
+			<div></div>
+			<h2  *ngIf="!isMobile" class="h3 fw-bold mb-4">Tech Stack</h2>
+			<div  *ngIf="!isMobile" class="d-flex justify-content-center align-items-center margin-negative position-relative tech-stack">
 				<img src="assets/images/arrow.png" alt="Arrow" class="arrow">
 				<div class="d-flex justify-content-center align-items-center">
 					<div class="gear-container" (mousedown)="startDragging($event)" (window:mouseup)="stopDragging()" (window:mousemove)="rotateGear($event)">
@@ -159,8 +168,8 @@
 	  </section>
 	  <div class="mt-1">
 		<div class="card-body d-flex justify-content-center align-items-center flex-column">
-			<h3 class="card-title fw-bold mt-4 mb-4">Showcase of My Developed Project Features</h3>
-		<div class="screen-shot-container">
+			<h3 *ngIf="!isMobile" class="card-title fw-bold mt-4 mb-4">Showcase of My Developed Project Features</h3>
+		<div  *ngIf="!isMobile" class="screen-shot-container">
 			<img [src]="uiScreenShotPathsandDesc[index].path" alt="Screenshot 1" class="img-fluid mb-3 rounded">
 			<div class="card-text"><div>{{uiScreenShotPathsandDesc[index].desc}}</div></div>
 		  </div>
@@ -168,10 +177,10 @@
 	  </div>	
 	  <section id="projects" class="bg-light section-spacing">
 		<div class="container">
-		  <h2 class="h3 fw-bold mb-8">Hobby Projects</h2>
+		  <h2 class="h3 fw-bold mb-8" [ngClass]="{'text-center': isMobile}">Hobby Projects</h2>
 		  <div class="row">
 			<!-- Personal Website Project -->
-			<div class="col-md-4 mb-4">
+			<div class="col-md-4 mb-4" [ngClass]="{'mobile-container': isMobile}">
 			  <div class="card h-100 position-relative">
 				<div class="position">
 				  <a href="https://github.com/ZehraDemirhan/portfolio" target="_blank" class="text-secondary text-decoration-none">
@@ -192,7 +201,7 @@
 			  </div>
 			</div>
 			<!-- Online Snake Game -->
-			<div class="col-md-4 mb-4">
+			<div class="col-md-4 mb-4" [ngClass]="{'mobile-container': isMobile}">
 			  <div class="card h-100 position-relative">
 				<div class="position">
 				  <a href="https://github.com/ZehraDemirhan/multiplayer-snake-game" target="_blank" class="text-secondary text-decoration-none">
@@ -214,7 +223,7 @@
 			  </div>
 			</div>
 			<!-- Domino Problem -->
-			<div class="col-md-4 mb-4">
+			<div class="col-md-4 mb-4" [ngClass]="{'mobile-container': isMobile}">
 			  <div class="card h-100 position-relative">
 				<div class="position">
 				  <a href="https://zehrademirhan.github.io/domino-problem/" target="_blank" class="text-secondary text-decoration-none">
@@ -235,9 +244,9 @@
 				</div>
 			  </div>
 			</div>
-			<h2 class="h3 fw-bold mb-8 mt-4">Old Projects</h2>
+			<h2 class="h3 fw-bold mb-8 mt-4" [ngClass]="{'text-center': isMobile}">Old Projects</h2>
 			<!-- Java Quiz App -->
-			<div class="col-md-4 mb-4">
+			<div class="col-md-4 mb-4" [ngClass]="{'mobile-container': isMobile}">
 			  <div class="card h-100 position-relative">
 				<div class="position">
 				  <a href="https://github.com/ZehraDemirhan/java-quiz-app" target="_blank" class="text-secondary text-decoration-none">
@@ -256,7 +265,7 @@
 				</div>
 			  </div>
 			</div>
-			<div class="col-md-4 mb-4">
+			<div class="col-md-4 mb-4" [ngClass]="{'mobile-container': isMobile}">
 				<div class="card h-100 position-relative">
 				  <div class="position">
 					<a href="https://github.com/ZehraDemirhan/TaskManagerProject" target="_blank" class="text-secondary text-decoration-none">
@@ -278,7 +287,7 @@
 				</div>
 			  </div>
 			<!-- My World Website Project -->
-			<div class="col-md-4 mb-4">
+			<div class="col-md-4 mb-4" [ngClass]="{'mobile-container': isMobile}">
 			  <div class="card h-100 position-relative">
 				<div class="position">
 				  <a href="https://zehrademirhan.github.io/MyWorldWebSite.github.io/index.html" target="_blank" class="text-secondary text-decoration-none">
