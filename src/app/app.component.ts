@@ -102,12 +102,7 @@ export const UIScreenShotPathsandDesc = [
 		desc: 'Like and Dislike feature for the chat page, allowing users to express their opinions and interact with the chat content.'
 	}
   ]
-
-export const OTHERIMAGES = [
-	  {
-		path: "assets/images/graduation.png",
-	  },
-]
+  
   
 @Component({
   selector: 'app-root',
@@ -123,7 +118,6 @@ export class AppComponent implements OnInit {
   skills = SKILLS;
   index = 0;
   uiScreenShotPathsandDesc = UIScreenShotPathsandDesc;
-  otherImages = OTHERIMAGES;
   name = '';
   email = '';
   message = '';
