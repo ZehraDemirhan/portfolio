@@ -3,48 +3,50 @@ import axios from 'axios';
 
 export const SKILLS = [
   {
-    name: 'Angular',
-    path: 'assets/images/angular-icon.webp',
-    experience: 'I have been using Angular for 1.5 years, during which I have developed numerous UIs utilizing a range of technologies. My expertise includes creating and using directives and pipes, with a strong understanding of component interactions such as input bindings, event emitting, and two-way bindings. I am well-versed in SCSS for styling, creating frontend services.  Additionally, I am proficient with third-party libraries, including ng-bootstrap, ApexCharts, and RXJS.'
+    name: 'AdonisJS',
+    path: 'https://cdn.worldvectorlogo.com/logos/adonisjs.svg',
+    experience: 'Architected and implemented modular, IoC-driven back-end APIs with AdonisJS to power scalable video analysis pipelines and conversational AI services. Designed and optimized job pipelines using class-based workers, integrated MinIO for object storage, and orchestrated secure internal networking between services.'
   },
   {
-    name: 'Nest.js',
-    path: 'assets/images/nest-js-icon.png',
-    experience: 'I have 1.5 years of experience with Nest.js, where I have coded numerous endpoints and created entire controller files from scratch. I have effectively used its built-in exception filters to handle unhandled exceptions and provide user-friendly responses. Additionally, I am familiar with creating custom route decorators and utilizing various param decorators to enhance HTTP route handling. My experience also includes implementing middleware functions to manage request and response objects efficiently within the application request-response cycle.'
+    name: 'Vue.js',
+    path: 'https://cdn3d.iconscout.com/3d/free/thumb/free-vuejs-3d-logo-download-in-png-blend-fbx-gltf-file-formats--vue-company-brand-vol-1-pack-logos-3640297.png?f=webp',
+    experience: 'Built interactive, real-time UIs in Vue.js—including video upload interfaces, a custom detection timeline UI with filterable/sortable tables, and conversational AI frontend components. Developed UI adapters to reuse existing components and accelerate feature delivery.'
+  },
+  {
+    name: 'PostgreSQL',
+    path: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png',
+    experience: 'Managed and optimized PostgreSQL databases over secure internal IP networking; leveraged pgvector and cube extensions for high-dimensional data handling. Tuned indices and queries for large-scale video analytics and leaderboard systems.'
+  },
+  {
+    name: 'Socket.IO',
+    path: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg',
+    experience: 'Implemented real-time, bidirectional WebSocket communication with Socket.IO to stream live video detection data and system alerts directly to client dashboards. Integrated Socket.IO into both video analysis timelines and AI chat applications for seamless updates.'
+  },
+  {
+    name: 'RabbitMQ',
+    path: 'https://cdn.iconscout.com/icon/free/png-256/free-rabbitmq-icon-download-in-svg-png-gif-file-formats--logo-brand-world-logos-vol-1-pack-icons-282296.png?f=webp',
+    experience: 'Integrated RabbitMQ to orchestrate distributed, event-driven worker pipelines—ensuring reliable message delivery, high-throughput task processing, and coordination between video analysis, embedding workflows, and notification systems.'
+  },
+  {
+    name: 'Docker',
+    path: 'https://static-00.iconduck.com/assets.00/docker-icon-2048x2048-5mc7mvtn.png',
+    experience: 'Containerized microservices and job workers with Docker, managing multiple development environments simultaneously. Deployed services using Docker Compose and Kubernetes for scalable orchestration and reliable CI/CD pipelines.'
   },
   {
     name: 'Node.js',
     path: 'assets/images/nodejs-icon.png',
-    experience: 'I have extensive experience with Node.js, where I have developed a strong understanding of asynchronous logic and the event loop. I have coded numerous file components for our no-code automation platform using Node.js file operations, including tasks such as compressing files, creating files from base64, retrieving content as base64, and handling binary content. Additionally, I am proficient with Axios and the file and folder systems, and I have utilized various third-party libraries to enhance functionality and efficiency in my projects.'
+    experience: 'Developed custom object-tracking algorithms in Node.js, integrating FFmpeg for video processing and filesystem operations. Automated workflows with cron jobs for scheduled analysis and built backend services for AI chat, embedding retries, and share-song features.'
   },
   {
-    name: 'Bootstrap',
-    path: 'assets/images/bootstrap-icon.png',
-    experience: 'I have extensive experience using Bootstrap for developing responsive and visually appealing UIs. I have worked with Metronic and Keen themes to create professional and dynamic interfaces. Additionally, I have used SCSS extensively for styling,'
-  },
-  {
-    name: 'React Native',
-    path: 'assets/images/react-icon.png',
-    experience: 'I have been working with React Native for 2 years, developing cross-platform mobile applications for both iOS and Android. At my company, I coded a full chat page utilizing its live update mechanism with RxJS, making me highly familiar with RxJS and WebSocket concepts, which I used extensively in the chat application.'
-  },
-  {
-	name: 'MongoDB',
-    path: 'assets/images/mongodb.svg',
-    experience: 'I have been working with MongoDB for 1 year, using it to develop and manage databases for various applications. My experience includes designing schemas, creating indexes, and performing CRUD operations. Additionally, I am familiar with using Mongoose for schema validation and data modeling in Node.js applications.'
-  },
-  {
-    name: 'Git',
-    path: 'assets/images/git-icon.png',
-    experience: 'I have been using Git for over 2 years. At my company, I managed branches for a complete mobile project, and I am comfortable resolving conflicts, doing rebases, interactive rebases, and performing merges. I follow best practices for commit messages and code reviews. Additionally, I am familiar with GitHub\'s pull request concept and review process.'
-  },
-  {
-    name: 'TypeScript',
-    path: 'assets/images/type-script-icon.png',
-    experience: 'I have 2 years of experience with TypeScript, starting with React Native and then transitioning to Angular. I am highly comfortable with TypeScript\'s syntax and proficient in using it effectively.'
+    name: 'Redis',
+    path: 'https://static-00.iconduck.com/assets.00/redis-original-wordmark-icon-2045x2048-nz2tg5u6.png',
+    experience: 'Configured and managed Redis clusters for fast, scalable leaderboard reads with sub-millisecond performance, implementing ZSET bucketing strategies and caching layers to support high-volume ranking queries.'
   }
 ];
 
-export const UIScreenShotPathsandDesc = [ 
+
+
+export const UIScreenShotPathsandDesc = [
 	{
 	  path: 'assets/images/1.png',
 	  desc: 'This is the Error and Statistics Tracking page I developed, featuring a comprehensive overview of recent errors and graphical trends for easy analysis.'
@@ -97,13 +99,13 @@ export const UIScreenShotPathsandDesc = [
 		path: "assets/images/13.jpeg",
 		desc: 'A fully functional chat page I developed, featuring real-time updates and WebSocket connections for seamless communication.'
 	},
-	{ 
+	{
 		path: "assets/images/14.jpeg",
 		desc: 'Like and Dislike feature for the chat page, allowing users to express their opinions and interact with the chat content.'
 	}
   ]
-  
-  
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -129,7 +131,7 @@ export class AppComponent implements OnInit {
 		console.log('resize');
 	  this.checkScreenSize();
 	}
-  
+
 	checkScreenSize() {
 	  this.isMobile = window.innerWidth <= 768;
 	}
@@ -139,7 +141,7 @@ export class AppComponent implements OnInit {
 	document.addEventListener('DOMContentLoaded', function () {
 		const menuToggle = document.getElementById('menu-toggle');
 		const mobileMenu = document.getElementById('mobile-menu');
-	
+
 		menuToggle!.addEventListener('click', function () {
 			console.log('clicked');
 		  if (mobileMenu!.style.display === 'block') {
@@ -181,7 +183,7 @@ export class AppComponent implements OnInit {
 	a.click(); // Trigger the download
 	document.body.removeChild(a); // Remove the <a> from the document body
   }
-  
+
 
   @HostListener('window:mouseup')
   stopDragging(): void {
@@ -228,7 +230,7 @@ export class AppComponent implements OnInit {
     return Math.atan2(deltaY, deltaX) * (180 / Math.PI);
   }
 
-  private updateCurrentSkill(): void { 
+  private updateCurrentSkill(): void {
     // Get the html element with the collison-detect class
     const collisionSquare = document.querySelector('.collison-detect') as HTMLElement;
 

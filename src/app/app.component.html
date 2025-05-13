@@ -25,16 +25,21 @@
     <a href="#contact" class="text-primary-foreground text-decoration-none border-bottom">Contact</a>
   </div>
 	</header>
-  
+
 	<main class="flex-grow-1">
 	  <section id="hero" class="bg-primary text-primary-foreground section-spacing section-style">
 		<div class="container d-flex flex-column flex-md-row align-items-center gap-4">
 		  <div class="text-center text-md-start">
 			<h2 class="display-4 fw-bold mb-4 text-white">Hi, I'm Zehra Demirhan</h2>
-			<p class="lead mb-4 text-white">A full-stack web developer with a passion for creating innovative and user-friendly applications.</p>
+			<p class="lead mb-4 text-white">A Full‑Stack Software Engineer specializing in backend development, system optimization, and scalable architectures. Experienced in automated
+        license plate recognition, face recognition, and object tracking, including implementing a custom tracking algorithm for video stability detec‑
+        tion. Skilled in AdonisJS, Vue.js, PostgreSQL, RabbitMQ, Kubernetes, and Docker, with a focus on real‑time systems and database optimization.</p>
+        <p class="text-white">
+          My alma mater, Bilkent University, honored me by featuring my work and career journey on their alumni page:
+          <a href="https://www.math.bilkent.edu.tr/Alumni/alumni.html" target="_blank" class="text-decoration-none text-white">math.bilkent.edu.tr/Alumni/alumni.html</a>
+        </p>
 			<div class="d-flex justify-content-center justify-content-md-start gap-3">
 			  <a href="#" class="btn btn-light text-primary" (click)="download()">View Resume</a>
-			  <a href="#contact" class="btn btn-outline-light">Contact Me</a>
 			</div>
 		  </div>
 		  <div class="d-flex justify-content-center">
@@ -42,22 +47,23 @@
 		  </div>
 		</div>
 	  </section>
-  
+
 	  <section id="about" class="bg-light section-spacing section-style">
 		<div>
 		  <div class="d-flex user-select">
 			<div class="col-md-6 ms-3 mb-4 mb-md-0" [ngClass]="{'about-me-div': !isMobile}">
 			  <h2 class="h3 fw-bold mb-4">About Me</h2>
-			  <p class="text-secondary mb-4">
-				I am a math graduate with a software development minor, and I have a strong passion for web development. I have experience working with a variety of technologies, including <strong>Node.js</strong>, <strong>Nest.js</strong>, <strong>MongoDB</strong>, <strong>Angular</strong>, and <strong>React Native</strong> for mobile development.
-			  </p>
-			  <p class="text-secondary mb-4">
-				Throughout my academic and professional journey, I have developed a deep understanding of full-stack web development, from designing and implementing backend systems to creating responsive and user-friendly front-end interfaces. I am constantly learning and exploring new technologies to stay up-to-date with the latest industry trends and best practices.
-			  </p>
-			  <p class="text-secondary">
-				In my free time, I enjoy exploring new ideas, tinkering with various frameworks and libraries, and contributing to open-source projects. I am passionate about creating innovative solutions that solve real-world problems and enhance the user experience.
-			  </p>
-			</div>
+        <p class="text-secondary mb-4">
+          I’m a Full-Stack Software Engineer specializing in backend development, system optimization, and scalable architectures, with extensive experience in automated license plate recognition, face recognition, and custom object-tracking algorithms for video stability detection.
+        </p>
+        <p class="text-secondary mb-4">
+          I build robust backend services using <strong>Node.js</strong> and <strong>TypeScript</strong>, architect asynchronous, event-driven pipelines with <strong>RabbitMQ</strong> and worker processes, and optimize <strong>PostgreSQL</strong> for high-dimensional data. On the front end, I deliver interactive experiences with <strong>Vue.js</strong> and real-time data streams via <strong>Socket.IO</strong>. I leverage <strong>AdonisJS</strong> for modular, IoC-driven APIs, use <strong>Docker</strong> and <strong>Kubernetes</strong> for container orchestration, and apply clean <strong>async coding</strong> practices to ensure performance and maintainability.
+        </p>
+        <p class="text-secondary">
+          Previously, I led backend development for an AI chat platform, integrating notification systems, embedding services, and automation to deliver seamless user experiences.
+        </p>
+
+      </div>
 			<div></div>
 			<h2  *ngIf="!isMobile" class="h3 fw-bold mb-4">Tech Stack</h2>
 			<div  *ngIf="!isMobile" class="d-flex justify-content-center align-items-center margin-negative position-relative tech-stack">
@@ -73,21 +79,21 @@
 						  <i class="bi bi-gear-wide-connected fs-1"></i>
 						</div>
 						<div class="collison-detect"></div>
-					  </div> 
+					  </div>
 			</div>
-		
+
 			<i id="arrow" class="fa fa-arrow-right me-2 ms-3 fs-1 text-muted"></i>
 			<div class="skill-display">
-				
+
 					<h4>{{ currentSkill?.name }}</h4>
 					<p>{{ currentSkill?.experience }}</p>
-				  
+
 				</div>
 			</div>
 		  </div>
 		</div>
 	  </section>
-  
+
 	  <section id="gpa" class="bg-secondary text-white section-spacing section-style">
 		<div class="container">
 		  <div class="d-flex justify-content-around">
@@ -104,69 +110,49 @@
 		  </div>
 		</div>
 	  </section>
-	  <section id="experience" class="section-spacing section-style card2">
-		<div class="container">
-		  <h2 class="h3 fw-bold mb-8">Experience</h2>
-		  <div class="row">
-			<div class=" mb-4">
-			  <div class="bg-white rounded p-4 h-100">
-				<h3 class="h5 fw-bold mb-3">Web Developer / Mobile Developer</h3>
-				<div class="d-flex align-items-center mb-4">
-				<img src="data:image/png;base64,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" alt="Cubicl" class="me-3 img-container" />
-				<img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_2624/https%3A%2F%2Fimages.ctfassets.net%2Fdm4oa8qtogq0%2F6asJmtJmSgwRci2XtgzkFA%2Fdb1b365dfac47710e584817039ea7397%2Fmonkedo_logo_dark.png%3Fw%3D270" class="img-container">
-				</div>
-				<h4 class="h6 fw-medium mb-2">Cubicl & Monkedo</h4>
-				<p class="text-secondary mb-4">May 2023 - Present</p>
-				<ul class="">
-					<li class="mb-1" class="mb-1">Coded integration between our platform and APIs of well-known companies such as ClickUp, Line, Mailchimp, and Cubicl. Developed seamless connections to enable data exchange and automated workflows.</li>
-					<li class="mb-1">Developed components for performing operations using these integrated APIs, ensuring efficient and reliable functionality within our no-code automation platform.</li>
-					<li class="mb-1">Implemented a comprehensive error handling interface to display errors to users effectively. This included developing detailed error messages, tooltips, and visual indicators.</li>
-					<li class="mb-1">Created a statistics page featuring recent errors, which includes a graphical representation of error trends and a detailed modal view for in-depth error analysis.</li>
-					<li class="mb-1">Designed and developed both the backend system and the frontend for error handling in our platform.</li>
-					<li class="mb-1">Developed an extended display UI for showing results in a clear and effective manner, ensuring that complex data is presented nicely to users.</li>
-					<li class="mb-1">Developed file operation components, including tasks such as compressing files, creating files from base64, retrieving content as base64, and handling binary content. These components streamlined file management within the platform.</li>
-					<li class="mb-1">Led the development of a comprehensive app development feature, encompassing both backend and frontend code. This task took me four months to complete and involved the following:
-					  <ul>
-						<li class="mb-1"><strong>Details Page:</strong> Provided a platform for users to view the current state of the application, access application information, and understand the app development process in detail.</li>
-						<li class="mb-1"><strong>App Editing Page:</strong> Consisted of three tabs:
-						  <ul>
-							<li class="mb-1"><em>App Design Tab:</em> Enabled users to design the app interface by dragging and dropping components, testing the application, and making dynamic changes supported by expression handling.</li>
-							<li class="mb-1"><em>Flows Tab:</em> Allowed users to create automations for the app. Users could save, edit, and review automations, and link named values to component inputs for dynamic updates.</li>
-							<li class="mb-1"><em>Details Tab:</em> Included a form for setting the app's name, description, and visual elements, allowing users to update application details.</li>
-						  </ul>
-						</li>
-						<li class="mb-1"><strong>Toolbar:</strong> Provided real-time observation of named values and errors, with indicators for new values and errors. Users could inspect details by clicking the respective buttons.</li>
+    <section id="experience" class="section-spacing section-style card2">
+      <div class="container">
+        <h2 class="h3 fw-bold mb-8">Experience</h2>
+        <div class="row">
+          <div class="mb-4">
+            <div class="bg-white rounded p-4 h-100">
+              <h3 class="h5 fw-bold mb-3">FULL-STACK ENGINEER</h3>
+              <h4 class="h6 fw-medium mb-2">Turk AI, Ankara, Turkey</h4>
+              <p class="text-secondary mb-4">Sep. 2024 - Present</p>
+              <ul>
+                <li class="mb-1">Architected scalable video analysis systems using AdonisJS, Vue.js, and PostgreSQL, implementing custom object-tracking algorithms for stability detection with real-time Socket.IO timelines.</li>
+                <li class="mb-1">Built modular, IoC-driven job pipelines with class-based workers and integrated RabbitMQ for distributed messaging between services.</li>
+                <li class="mb-1">Managed and optimized PostgreSQL databases via secure internal IP networking; leveraged pgvector and cube extensions for high-dimensional data handling.</li>
+                <li class="mb-1">Integrated MinIO object storage and deployed containerized services with Docker and Kubernetes for scalable orchestration.</li>
+                <li class="mb-1">Developed Vue.js frontend components for video upload and detection timelines, featuring filterable/sortable tables for enhanced UX.</li>
+                <li class="mb-1">Implemented cron-job-based notification system and scheduled tasks with state tracking to prevent duplicate alerts.</li>
+                <li class="mb-1">Integrated internal embedding service with OpenAI, including fallback mechanisms and concurrency handling for reliable performance.</li>
+                <li class="mb-1">Designed a user-tracking system for ads and campaigns by hashing IP and OS data to attribute UTM sources accurately.</li>
+                <li class="mb-1">Built “Share Song” feature with presigned and masked URLs for secure content sharing and tracked engagement analytics.</li>
+                <li class="mb-1">Automated daily news-fetching and publishing via WordPress API with translation and embedded tracking for analytics.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mb-4">
+            <div class="bg-white rounded p-4 h-100">
+              <h3 class="h5 fw-bold mb-3">PART-TIME FULL-STACK ENGINEER</h3>
+              <h4 class="h6 fw-medium mb-2">Cubicl, Ankara, Turkey</h4>
+              <p class="text-secondary mb-4">May 2023 - Aug. 2024</p>
+              <ul>
+                <li class="mb-1">Engineered integrations between the platform and APIs of enterprise solutions including ClickUp, Line, Mailchimp, and more.</li>
+                <li class="mb-1">Designed and implemented Node.js & MongoDB-based file management components for compression, base64 conversions, and binary data handling.</li>
+                <li class="mb-1">Led end-to-end development of a comprehensive app builder feature over four months, coordinating Node.js backend and Next.js frontend work.</li>
+                <li class="mb-1">Developed an Angular.js drag-and-drop UI for app interface design within the no-code automation platform.</li>
+                <li class="mb-1">Facilitated creation and management of user-defined automations, empowering users to build, save, edit, and review workflows.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-					  </ul>
-					</li>
-					<li class="mb-1">Developed a chat feature for the mobile project, enabling real-time communication between users. Implemented functionalities such as message sending, receiving, notifications, and chat history management.</li>
-				  </ul>
-				  
-			  </div>
-			</div>
-			<div class="mb-4">
-			  <div class="bg-white rounded p-4 ">
-				<h3 class="h5 fw-bold mb-3">Intern</h3>
-				<img src="data:image/png;base64,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" alt="Cubicl" class="me-3 mb-4 img-container" />
-				<h4 class="h6 fw-medium mb-2">Cubicl</h4>
-				<p class="text-secondary mb-4">December 2022 - April 2023</p>
-				<ul class="">
-					<li class="mb-1">Fixed several bugs in the mobile app, improving stability and performance.</li>
-					<li class="mb-1">Enhanced and resolved numerous UI issues to provide a better user experience.</li>
-					<li class="mb-1">Gained an understanding of React Native and CSS.</li>
-					<li class="mb-1">Learned JSX syntax and proficient use of Git for version control.</li>
-					<li class="mb-1">Familiarized with the lifecycle hooks of React Native.</li>
-					<li class="mb-1">Was responsible for branch management, building projects using Xcode and Android Studio.</li>
-					<li class="mb-1">Published new version updates on Play Console and App Store Connect.</li>
-				</ul>
-			  </div>
-		
-			</div>
-		  </div>
-		</div>
-		
-	  </section>
-	  <div class="mt-1">
+    <!---
+    <div class="mt-1">
 		<div class="card-body d-flex justify-content-center align-items-center flex-column">
 			<h3 *ngIf="!isMobile" class="card-title fw-bold mt-4 mb-4">Showcase of My Developed Project Features</h3>
 		<div  *ngIf="!isMobile" class="screen-shot-container">
@@ -174,201 +160,138 @@
 			<div class="card-text"><div>{{uiScreenShotPathsandDesc[index].desc}}</div></div>
 		  </div>
 		</div>
-	  </div>	
-	  <section id="projects" class="bg-light section-spacing">
-		<div class="container">
-		  <h2 class="h3 fw-bold mb-8" [ngClass]="{'text-center': isMobile}">Hobby Projects</h2>
-		  <div class="row">
-			<!-- Personal Website Project -->
-			<div class="col-md-4 mb-4" [ngClass]="{'mobile-container': isMobile}">
-			  <div class="card h-100 position-relative">
-				<div class="position">
-				  <a href="https://github.com/ZehraDemirhan/portfolio" target="_blank" class="text-secondary text-decoration-none">
-					<i class="bi bi-arrow-up-right-square-fill fs-3"></i>
-				  </a>
-				</div>
-				<img src="assets/images/zicon.png" class="card-img-top icon-style" alt="Portfolio Project">
-				<div class="card-body">
-				  <h5 class="card-title fw-bold mb-2">Personal Website Project</h5>
-				  <p class="card-text mb-4">A newly developed personal website showcasing my portfolio, skills, and projects. It features a responsive design and interactive elements, built with Angular, Bootstrap, and Node.js.</p>
-				  <div class="d-flex gap-2">
-					<span class="badge bg-secondary">Angular</span>
-					<span class="badge bg-secondary">Bootstrap</span>
-					<span class="badge bg-secondary">Node.js</span>
-				  </div>
-				  <p class="mt-2 text-muted"><small>Completed: July 2024</small></p>
-				</div>
-			  </div>
-			</div>
-			<!-- Online Snake Game -->
-			<div class="col-md-4 mb-4" [ngClass]="{'mobile-container': isMobile}">
-			  <div class="card h-100 position-relative">
-				<div class="position">
-				  <a href="https://github.com/ZehraDemirhan/multiplayer-snake-game" target="_blank" class="text-secondary text-decoration-none">
-					<i class="bi bi-arrow-up-right-square-fill fs-3"></i>
-				  </a>
-				</div>
-				<img src="assets/images/snake.jpeg" class="card-img-top icon-style" alt="Online Snake Game">
-				<div class="card-body">
-				  <h5 class="card-title fw-bold mb-2">Online Snake Game</h5>
-				  <p class="card-text mb-4">An online snake game developed to improve backend development skills using Vite for fast build times and efficient hot module replacement. The project is still in progress.</p>
-				  <div class="d-flex gap-2">
-					<span class="badge bg-secondary">TypeScript</span>
-					<span class="badge bg-secondary">RxJS</span>
-					<span class="badge bg-secondary">CSS</span>
-					<span class="badge bg-secondary">Node.js</span>
-				  </div>
-				  <p class="mt-2 text-muted"><small>In Progress: May 2024 - Present</small></p>
-				</div>
-			  </div>
-			</div>
-			<!-- Domino Problem -->
-			<div class="col-md-4 mb-4" [ngClass]="{'mobile-container': isMobile}">
-			  <div class="card h-100 position-relative">
-				<div class="position">
-				  <a href="https://zehrademirhan.github.io/domino-problem/" target="_blank" class="text-secondary text-decoration-none">
-					<i class="bi bi-arrow-up-right-square-fill fs-3"></i>
-				  </a>
-				</div>
-				<img src="assets/images/domino.png" class="card-img-top icon-style" alt="Domino Project">
-				<div class="card-body">
-				  <h5 class="card-title fw-bold mb-2">Domino Problem</h5>
-				  <p class="card-text mb-4">A frontend application developed using AngularJS, TypeScript, Bootstrap, and SCSS to gain a deeper understanding of the Angular framework.</p>
-				  <div class="d-flex gap-2">
-					<span class="badge bg-secondary">TypeScript</span>
-					<span class="badge bg-secondary">Bootstrap</span>
-					<span class="badge bg-secondary">Angular</span>
-					<span class="badge bg-secondary">SCSS</span>
-				  </div>
-				  <p class="mt-2 text-muted"><small>Completed: April 2024</small></p>
-				</div>
-			  </div>
-			</div>
-			<h2 class="h3 fw-bold mb-8 mt-4" [ngClass]="{'text-center': isMobile}">Old Projects</h2>
-			<!-- Java Quiz App -->
-			<div class="col-md-4 mb-4" [ngClass]="{'mobile-container': isMobile}">
-			  <div class="card h-100 position-relative">
-				<div class="position">
-				  <a href="https://github.com/ZehraDemirhan/java-quiz-app" target="_blank" class="text-secondary text-decoration-none">
-					<i class="bi bi-arrow-up-right-square-fill fs-3"></i>
-				  </a>
-				</div>
-				<img src="assets/images/quiz_icon.png" class="card-img-top icon-style" alt="Java Quiz App">
-				<div class="card-body">
-				  <h5 class="card-title fw-bold mb-2">Java Quiz App</h5>
-				  <p class="card-text mb-4">A desktop application built with Java Swing.</p>
-				  <div class="d-flex gap-2">
-					<span class="badge bg-secondary">Java</span>
-					<span class="badge bg-secondary">Swing</span>
-				  </div>
-				  <p class="mt-2 text-muted"><small>Completed: Fall 2023</small></p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 mb-4" [ngClass]="{'mobile-container': isMobile}">
-				<div class="card h-100 position-relative">
-				  <div class="position">
-					<a href="https://github.com/ZehraDemirhan/TaskManagerProject" target="_blank" class="text-secondary text-decoration-none">
-					  <i class="bi bi-arrow-up-right-square-fill fs-3"></i>
-					</a>
-				  </div>
-				  <img src="assets/images/task_manager.png" class="card-img-top icon-style" alt="Task Manager Application">
-				  <div class="card-body">
-					<h5 class="card-title fw-bold mb-2">Basic Task Manager Application</h5>
-					<p class="card-text mb-4">A basic app where users can register, login, create task lists, and manage tasks. Developed using PHP, JavaScript, and jQuery, with AJAX technologies for styling. Deployed on Heroku using ClearDB. (Currently inaccessible due to database unavailability.)</p>
-					<div class="d-flex gap-2">
-					  <span class="badge bg-secondary">PHP</span>
-					  <span class="badge bg-secondary">JavaScript</span>
-					  <span class="badge bg-secondary">jQuery</span>
-					  <span class="badge bg-secondary">AJAX</span>
-					</div>
-					<p class="mt-2 text-muted"><small>Completed: Spring 2022</small></p>
-				  </div>
-				</div>
-			  </div>
-			<!-- My World Website Project -->
-			<div class="col-md-4 mb-4" [ngClass]="{'mobile-container': isMobile}">
-			  <div class="card h-100 position-relative">
-				<div class="position">
-				  <a href="https://zehrademirhan.github.io/MyWorldWebSite.github.io/index.html" target="_blank" class="text-secondary text-decoration-none">
-					<i class="bi bi-arrow-up-right-square-fill fs-3"></i>
-				  </a>
-				</div>
-				<img src="assets/images/compass.jpg" class="card-img-top icon-style" alt="My World Website Project">
-				<div class="card-body">
-				  <h5 class="card-title fw-bold mb-2">My World Website Project</h5>
-				  <p class="card-text mb-4">A static website project constructed in HTML, CSS, JavaScript, and jQuery, featuring continent cards, a card generator, world map and country flag information, and a car race game. Enhanced with Materialize CSS and jQuery UI plugins.</p>
-				  <div class="d-flex gap-2">
-					<span class="badge bg-secondary">HTML</span>
-					<span class="badge bg-secondary">JavaScript</span>
-					<span class="badge bg-secondary">CSS</span>
-					<span class="badge bg-secondary">jQuery</span>
-					<span class="badge bg-secondary">Materialize CSS</span>
-				  </div>
-				  <p class="mt-2 text-muted"><small>Completed: Fall 2022</small></p>
-				</div>
-			  </div>
-			</div>
-			<!-- Task Manager Application -->
-			
-			<!-- Personal Website Project (Previous) -->
-	
-		  </div>
-		</div>
-	  </section>
-	  
-	  
-  
-	  <section id="contact" class="section-spacing">
-		<div class="container">
-		  <h2 class="h3 fw-bold mb-8">Contact Me </h2>
-		  <div class="row">
-			<div class="col-md-6 mb-4 mb-md-0">
-			  <form class="space-y-4">
-				<div class="mb-3">
-				  <label for="name" class="form-label">Name</label>
-				  <input type="text" id="name" name="name" class="form-control" [(ngModel)]="name" required />
-				</div>
-				<div class="mb-3">
-				  <label for="email" class="form-label">Email</label>
-				  <input type="email" id="email" name="email" [(ngModel)]="email" class="form-control" required />
-				</div>
-				<div class="mb-3">
-				  <label for="message" class="form-label">Message</label>
-				  <textarea id="message" rows="5" name="message" [(ngModel)]="message" class="form-control" required></textarea>
-				</div>
-				<button type="submit" class="btn btn-secondary w-100" (click)="sendEmail()">Send Message</button>
-			  </form>
-			</div>
-			<div class="col-md-6 d-flex flex-column gap-3">
-			  <div class="d-flex align-items-center gap-3">
-				<i class="bi bi-envelope text-primary"></i>
-				<a href="mailto:zehra@example.com" class="text-secondary text-decoration-none">zehra.demirhan00&#64;gmail.com</a>
-			  </div>
-			  <div class="d-flex align-items-center gap-3">
-				<i class="bi bi-telephone text-primary"></i>
-				<a href="tel:+905079324854" class="text-secondary text-decoration-none">+90 (507) 932 48-54</a>
-			  </div>
-			  <div class="d-flex align-items-center gap-3">
-				<i class="bi bi-linkedin text-primary"></i>
-				<a href="https://www.linkedin.com/in/zehra-demirhan-b5a26a233/"  target="_blank" class="text-secondary text-decoration-none">LinkedIn</a>
-			  </div>
-			  <div class="d-flex align-items-center gap-3">
-				<i class="bi bi-github text-primary"></i>
-				<a href="https://github.com/ZehraDemirhan" target="_blank" class="text-secondary text-decoration-none">GitHub</a>
-			  </div>
-			  <span class="text-muted">
-				<i class="bi bi-exclamation-circle-fill fs-5 me-1 text-muted"></i><i>Note: </i> Although this project does not include a backend, the send email functionality works because I have set up an event flow in our no-code automation platform. This flow listens for incoming requests to a specific webhook URL and triggers the email operation accordingly.</span>
-			</div>
-		  </div>
-		</div>
-	  </section>
+
+	  </div>
+	  --->
+    <section id="projects" class="bg-secondary-subtle section-spacing">
+      <div class="container">
+        <h2 class="h3 fw-bold mb-8" [ngClass]="{'text-center': isMobile}">Projects</h2>
+        <div class="row">
+
+
+          <!-- Scalable Real-Time Leaderboard -->
+          <div class=" mb-4" [ngClass]="{'mobile-container': isMobile}">
+            <div class="card h-100">
+              <div class="position">
+                <a href="https://leaderboard-frontend-lac.vercel.app/" target="_blank" class="text-secondary text-decoration-none">
+                  <i class="bi bi-arrow-up-right-square-fill fs-3"></i>
+                </a>
+              </div>
+              <img src="https://www.clipartmax.com/png/full/293-2934974_leader-leaderboard-icon-png.png" class="card-img-top icon-style" alt="Scalable Real-Time Leaderboard">
+              <div class="card-body">
+                <h5 class="card-title fw-bold mb-2">Scalable Real-Time Leaderboard</h5>
+                <p class="text-secondary mb-4"><small>May 2025</small></p>
+                <ul class="mb-4">
+                  <li>Responsive Next.js UI with drag-&-drop columns, country grouping, and autocomplete search.</li>
+                  <li>Real-time prizes via Pusher.js WebSockets and light/dark themes with styled-components.</li>
+                  <li>High-throughput AdonisJS/Node.js backend: Dockerized 3-node Redis cluster (10 000 buckets, ZSETs) and PostgreSQL with B-tree indexes serving 10 M users.</li>
+                  <li>Deployed on AWS EC2 with Docker Compose. <em> • <a href="https://leaderboard-frontend-lac.vercel.app/" target="_blank"> Live Demo</a>• <a href="https://github.com/ZehraDemirhan/leaderboard-adonisjs-backend" target="_blank">Backend Repo</a> • <a href="https://github.com/ZehraDemirhan/leaderboard-frontend" target="_blank">Frontend Repo</a></em></li>
+                </ul>
+                <div class="d-flex gap-2">
+                  <span class="badge bg-secondary">Next.js</span>
+                  <span class="badge bg-secondary">Pusher.js</span>
+                  <span class="badge bg-secondary">Styled-Components</span>
+                  <span class="badge bg-secondary">AdonisJS</span>
+                  <span class="badge bg-secondary">Redis</span>
+                  <span class="badge bg-secondary">PostgreSQL</span>
+                  <span class="badge bg-secondary">Docker</span>
+                  <span class="badge bg-secondary">AWS EC2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Adonis REST API -->
+          <div class="mb-4" [ngClass]="{'mobile-container': isMobile}">
+            <div class="card h-100 ">
+              <div class="position">
+                <a href="https://github.com/ZehraDemirhan/adonis-rest-api" target="_blank" class="text-secondary text-decoration-none">
+                  <i class="bi bi-arrow-up-right-square-fill fs-3"></i>
+                </a>
+              </div>
+              <img src="https://www.javacodegeeks.com/wp-content/uploads/2024/01/rest-api-icon.png" class="card-img-top icon-style" alt="Adonis REST API">
+              <div class="card-body">
+                <h5 class="card-title fw-bold mb-2">Adonis REST API</h5>
+                <p class="text-secondary mb-4"><small>Sep. 2024</small></p>
+                <ul class="mb-4">
+                  <li>Developed a web application for employee & company management with secure authentication and role-based access control.</li>
+                  <li>Built the backend using AdonisJS and the frontend with Vue.js, leveraging access tokens, session storage, and Axios interceptors.</li>
+                  <li><a href="#" target="_blank">Project Link</a></li>
+                </ul>
+                <div class="d-flex gap-2">
+                  <span class="badge bg-secondary">AdonisJS</span>
+                  <span class="badge bg-secondary">Vue.js</span>
+                  <span class="badge bg-secondary">Access Tokens</span>
+                  <span class="badge bg-secondary">Session Storage</span>
+                  <span class="badge bg-secondary">Axios</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center justify-content-between">
+          <div class="col-md-6" [ngClass]="{'mobile-container': isMobile}">
+            <div class="card">
+              <div class="position">
+                <a href="https://github.com/ZehraDemirhan/portfolio" target="_blank" class="text-secondary text-decoration-none">
+                  <i class="bi bi-arrow-up-right-square-fill fs-3"></i>
+                </a>
+              </div>
+              <img src="https://png.pngtree.com/png-vector/20230209/ourmid/pngtree-letter-z-logo-png-image_6590691.png" class="card-img-top icon-style" alt="Portfolio Project">
+              <div class="card-body">
+                <h5 class="card-title fw-bold mb-2">Personal Website Project</h5>
+                <p class="text-secondary mb-4"><small>July 2024</small></p>
+                <ul class="mb-4">
+                  <li>Responsive design showcasing portfolio, skills, and projects.</li>
+                  <li>Interactive elements built with Angular and Bootstrap.</li>
+                  <li>Backend integration using Node.js.</li>
+                </ul>
+                <div class="d-flex gap-2">
+                  <span class="badge bg-secondary">Angular</span>
+                  <span class="badge bg-secondary">Bootstrap</span>
+                  <span class="badge bg-secondary">Node.js</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 ms-1" [ngClass]="{'mobile-container': isMobile}">
+            <div class="card">
+              <div class="position">
+                <a href="https://zehrademirhan.github.io/domino-problem/" target="_blank" class="text-secondary text-decoration-none">
+                  <i class="bi bi-arrow-up-right-square-fill fs-3"></i>
+                </a>
+              </div>
+              <img src="assets/images/domino.png" class="card-img-top icon-style" alt="Domino Project">
+              <div class="card-body">
+                <h5 class="card-title fw-bold mb-2">Domino Problem</h5>
+                <p class="text-secondary mb-4"><small>April 2024</small></p>
+                <ul class="mb-4">
+                  <li>AngularJS/TypeScript implementation solving the domino challenge.</li>
+                  <li>Dynamic UI components enhancing user interaction.</li>
+                  <li>SCSS styling for cleaner visuals and maintainability.</li>
+                </ul>
+                <div class="d-flex gap-2">
+                  <span class="badge bg-secondary">TypeScript</span>
+                  <span class="badge bg-secondary">AngularJS</span>
+                  <span class="badge bg-secondary">SCSS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
 	</main>
-  
+
 	<footer class="bg-primary text-primary-foreground py-4 px-6">
 	  <div class="container d-flex justify-content-end align-items-center">
 		<p class="mb-0 text-white">&copy; 2024 Zehra Demirhan. All rights reserved.</p>
 	  </div>
 	</footer>
   </div>
-  

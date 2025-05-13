@@ -1,7 +1,7 @@
 .container-fluid {
 	padding: 0;
   }
-  
+
   :root {
 	--background: #fff;
 	--foreground: #0a0a0a;
@@ -24,62 +24,62 @@
 	--ring: hsl(346.8, 77.2%, 49.8%);
 	--radius: 0.5rem;
   }
-  
+
   body {
 	background-color: var(--background);
 	color: var(--foreground);
 	font-family: 'Inter', sans-serif;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
 	font-family: 'Inter', sans-serif;
   }
-  
+
   .bg-primary {
 	background-color: #e22a49 !important;
   }
-  
+
   .text-primary {
 	color: var(--primary) !important;
   }
-  
+
   .text-primary-foreground {
 	color: var(--primary-foreground) !important;
   }
-  
+
   .section-spacing {
 	padding-top: 3rem;
 	padding-bottom: 3rem;
   }
-  
+
   .mb-4 {
 	margin-bottom: 1.5rem !important;
   }
-  
+
   .mb-8 {
 	margin-bottom: 3rem !important;
   }
-  
+
   .px-4 {
 	padding-left: 1.5rem !important;
 	padding-right: 1.5rem !important;
   }
-  
+
   .px-6 {
 	padding-left: 2rem !important;
 	padding-right: 2rem !important;
   }
-  
+
   .py-12 {
 	padding-top: 3rem !important;
 	padding-bottom: 3rem !important;
   }
-  
+
   .py-md-24 {
 	padding-top: 6rem !important;
 	padding-bottom: 6rem !important;
   }
-  
+
 .screen-shot-container {
 	display: flex;
 	justify-content: center;
@@ -88,14 +88,14 @@
 	padding-bottom: 50px;
 	padding-left: 50px;
 	padding-top: 15px;
-	
+
   }
 
   .about-me-container {
 	margin-left: 100px;
 	margin-right: -200px;
   }
-  
+
   body {
 	display: flex;
 	justify-content: center;
@@ -104,7 +104,7 @@
 	background-color: #f0f0f0;
 	margin: 0;
   }
-  
+
   .gear-container {
 	position: relative;
 	width: 400px;
@@ -114,7 +114,7 @@
 	align-items: center;
 	cursor: grab;
   }
-  
+
   .gear {
 	position: absolute;
 	width: 100%;
@@ -127,7 +127,7 @@
 	background: radial-gradient(circle, #ccc 50%, #615f5f 85%);
 	animation: initial-rotate 2s ease-in-out;
   }
-  
+
   @keyframes initial-rotate {
 	from {
 	  transform: rotate(0deg);
@@ -136,7 +136,7 @@
 	  transform: rotate(360deg);
 	}
   }
-  
+
   .center-circle {
 	position: absolute;
 	width: 100px;
@@ -151,7 +151,7 @@
 	z-index: 1;
 	animation: initial-rotate 2s ease-in-out;
   }
-  
+
   .icon {
 	user-select: none;
 	pointer-events: none;
@@ -177,13 +177,13 @@
 	margin-left: 10px;
 
   }
-  
+
   .icon img {
 	cursor: pointer;
 	width: 85%;
 	height: 80%;
   }
-  
+
   .icon1 { top: 15%; left: 50%; transform: translate(-50%, -50%); }
   .icon2 { top: 27%; right: 30px; transform: translate(-50%, -50%); }
   .icon3 { top: 50%; right: -15px; transform: translate(-50%, -50%); }
@@ -192,7 +192,7 @@
   .icon6 { bottom: 27%; left: 95px; transform: translate(-50%, 50%); }
   .icon7 { top: 50%; left: 15%; transform: translate(-50%, -50%); }
   .icon8 { top: 27%; left: 25%; transform: translate(-50%, -50%); }
-  
+
   .gear-arm {
 	position: absolute;
 	width: 10px;
@@ -201,12 +201,12 @@
 	top: 50%;
 	transform: translateY(-50%);
   }
-  
+
   .gear-arm1 { left: 0; transform: translateY(-50%) rotate(0deg); }
   .gear-arm2 { right: 0; transform: translateY(-50%) rotate(0deg); }
   .gear-arm3 { top: 0; left: 50%; transform: translate(-50%, 0) rotate(90deg); }
   .gear-arm4 { bottom: 0; left: 50%; transform: translate(-50%, 0) rotate(90deg); }
-  
+
   .skill-display {
 	max-height: 400px;
 	width: 500px;
@@ -217,7 +217,7 @@
 	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 	z-index: 2;
   }
-  
+
 .about-me-div {
 	padding-right: 10px;
 	max-width: 500px;
@@ -256,24 +256,24 @@
 	border: none;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
+
   .card-title {
-	
+
 	color: #343a40;
   }
-  
+
   .screen-shot-container {
 	text-align: center;
 	display:flex;
 	flex-direction: column;
   }
-  
+
   .img-fluid {
 	border: 5px solid rgba(108, 117, 125, 1) ;
 	height: 700px;
 	border-radius: 0.25rem;
   }
-  
+
   .card-text {
 	display: flex;
 	padding: 10px;
@@ -287,7 +287,7 @@
 	color: #6c757d;
 	font-size: 1rem;
   }
-  
+
   .position {
 	position: absolute;
 	top: -6px;
@@ -364,18 +364,18 @@
     z-index: 5;
     color: white;
   }
-  
+
   .mobile-menu a {
 	display: block;
 	color: white;
 	padding: 0.5rem 1rem;
 	text-decoration: none;
   }
-  
+
   .mobile-menu a:hover {
 	background-color: #495057;
   }
-  
+
   .border-bottom {
 	border-bottom: 1px solid;
   }
